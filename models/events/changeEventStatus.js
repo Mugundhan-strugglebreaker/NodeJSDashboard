@@ -32,9 +32,9 @@ async function Example ( data ) {
     today = yyyy+ '-' + mm + '-' + dd;
      for (let i=0;i<data.length;i++) {
         let status = (new Date(data[i].date) - new Date()) >= 0
-        if(!status){
-            status = (data[i].date === today)
-        }
+        // if(!status){
+        //     status = (data[i].date === today)
+        // }
         // console.log(i+" "+status+" "+data[i].event_id+ " "+(data[i].date - today)+" "+data[i].date+"-->"+today+" "+(data[i].date===today))
         if(!status){
             let queryOutput = await doQuery ("Update  event set is_complete=1 where event_id="+data[i].event_id)

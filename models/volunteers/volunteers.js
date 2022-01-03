@@ -29,8 +29,7 @@ exports.volunteers = (req,res)=>{
             db.query(sql_1,function (err,results,fields){
                 if (err){
                     return reject(error)
-                }
-               
+                } 
                 resolve({results,fields})
             })
 
